@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --wmk-surface: #f8f9fb;
+    --wmk-surface-container: #edeef0;
+    --wmk-primary: #10243a;
+    --wmk-secondary: #b99a5b;
+    --wmk-tertiary: #1e293b;
+    --wmk-text-muted: #64748b;
+    --wmk-border: #e2e8f0;
+    --wmk-border-dark: #cbd5e1;
+    --wmk-canvas: #ffffff;
+    --wmk-neutral-light: #f4f5f7;
+  }
+
+  body {
+    background-color: var(--wmk-surface);
+    color: var(--wmk-tertiary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Strict rectangular precision directive from WMK Corporate Standard */
+  button, input, select, textarea, div, section, article, table, th, td, span, badge {
+    border-radius: 0px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' on, 'cv05' on;
+  font-family: 'JetBrains Mono', monospace, 'Inter', sans-serif;
+}
+
+/* Custom crisp scrollbar matching WMK aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f5f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10243a;
+}

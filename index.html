@@ -1,0 +1,1819 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WMK TRADERS — Multi-Category Trading &amp; Supply Business | Karnal, Haryana</title>
+    <meta name="description" content="WMK Traders is a multi-category trading and supply business in Karnal, Haryana. Owned and run by Himanshu Taneja. Udyam MSME registered, supplying electricals, hardware, furniture, IT, stationery, and institutional requirements." />
+    <meta property="og:title" content="WMK TRADERS — Trading &amp; Supply Business | Karnal, Haryana" />
+    <meta property="og:description" content="Reliable supply. Quality products. Trusted partnerships. Multi-category trading and supply business in Karnal, Haryana." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* ==========================================================================
+         WMK TRADERS — SELF-CONTAINED STYLESHEET
+         Strictly follows WMK design guidelines:
+         - Navy #10243A, White #FFFFFF, Light Grey #F4F5F7, Muted Gold #B99A5B, Charcoal text
+         - Square-edged buttons (0px radius), thin divider lines, no gradients, no glassmorphism
+         - Responsive under 820px mobile menu
+         - Automatic & manual dark mode
+         - Accessible keyboard focus and reduced motion support
+         ========================================================================== */
+
+      :root {
+        --color-navy: #10243A;
+        --color-navy-dark: #0A1828;
+        --color-navy-light: #162E49;
+        --color-gold: #B99A5B;
+        --color-gold-hover: #A6884C;
+        --color-gold-subtle: #F3ECE0;
+        --color-white: #FFFFFF;
+        --color-grey-light: #F4F5F7;
+        --color-grey-alt: #EAECEF;
+        --color-charcoal: #1E293B;
+        --color-charcoal-muted: #475569;
+        --color-border: #E2E8F0;
+        --color-border-darker: #CBD5E1;
+        --color-input-bg: #FFFFFF;
+
+        --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --container-max: 1200px;
+        --transition-standard: 0.15s ease-in-out;
+      }
+
+      /* Dark Mode (Follows system settings or manual override) */
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --color-white: #0C1724;
+          --color-grey-light: #101E2E;
+          --color-grey-alt: #16283D;
+          --color-charcoal: #E2E8F0;
+          --color-charcoal-muted: #94A3B8;
+          --color-border: #1E334D;
+          --color-border-darker: #284466;
+          --color-input-bg: #101E2E;
+          --color-gold-subtle: #24241B;
+        }
+      }
+
+      [data-theme="dark"] {
+        --color-white: #0C1724;
+        --color-grey-light: #101E2E;
+        --color-grey-alt: #16283D;
+        --color-charcoal: #E2E8F0;
+        --color-charcoal-muted: #94A3B8;
+        --color-border: #1E334D;
+        --color-border-darker: #284466;
+        --color-input-bg: #101E2E;
+        --color-gold-subtle: #24241B;
+      }
+
+      [data-theme="light"] {
+        --color-white: #FFFFFF;
+        --color-grey-light: #F4F5F7;
+        --color-grey-alt: #EAECEF;
+        --color-charcoal: #1E293B;
+        --color-charcoal-muted: #475569;
+        --color-border: #E2E8F0;
+        --color-border-darker: #CBD5E1;
+        --color-input-bg: #FFFFFF;
+        --color-gold-subtle: #F3ECE0;
+      }
+
+      /* Base & Reset */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 !important; /* Strict square-edge corporate standard */
+      }
+
+      html {
+        font-family: var(--font-sans);
+        color: var(--color-charcoal);
+        background-color: var(--color-white);
+        scroll-behavior: smooth;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Reduced motion compliance */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Visible Keyboard Focus */
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 2px solid var(--color-gold);
+        outline-offset: 2px;
+      }
+
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+
+      /* Typography */
+      h1, h2, h3, h4 {
+        color: inherit;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+      }
+
+      p {
+        color: var(--color-charcoal-muted);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color var(--transition-standard);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 0 1.5rem;
+        font-family: var(--font-sans);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background-color var(--transition-standard), border-color var(--transition-standard), color var(--transition-standard);
+      }
+
+      .btn-gold {
+        background-color: var(--color-gold);
+        border-color: var(--color-gold);
+        color: #FFFFFF;
+      }
+
+      .btn-gold:hover {
+        background-color: var(--color-gold-hover);
+        border-color: var(--color-gold-hover);
+      }
+
+      .btn-navy {
+        background-color: var(--color-navy);
+        border-color: var(--color-navy);
+        color: #FFFFFF;
+      }
+
+      .btn-navy:hover {
+        background-color: var(--color-navy-light);
+        border-color: var(--color-navy-light);
+      }
+
+      .btn-outline-white {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.4);
+        color: #FFFFFF;
+      }
+
+      .btn-outline-white:hover {
+        border-color: #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .btn-outline-dark {
+        background-color: transparent;
+        border-color: var(--color-border-darker);
+        color: var(--color-charcoal);
+      }
+
+      .btn-outline-dark:hover {
+        border-color: var(--color-charcoal);
+        background-color: var(--color-grey-light);
+      }
+
+      /* Sections General */
+      section {
+        padding: 4.5rem 0;
+        position: relative;
+      }
+
+      @media (min-width: 768px) {
+        section {
+          padding: 5.5rem 0;
+        }
+      }
+
+      .section-grey {
+        background-color: var(--color-grey-light);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .section-white {
+        background-color: var(--color-white);
+      }
+
+      /* Thin Divider */
+      .thin-divider {
+        height: 1px;
+        background-color: var(--color-border);
+        border: none;
+        margin: 2rem 0;
+      }
+
+      /* ==========================================================================
+         HEADER
+         ========================================================================== */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: var(--color-navy);
+        border-bottom: 1px solid #1A2D45;
+        color: #FFFFFF;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        gap: 1.5rem;
+      }
+
+      /* Brand Logo */
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        white-space: nowrap;
+      }
+
+      .brand-logo .logo-traders {
+        color: var(--color-gold);
+      }
+
+      .brand-badge {
+        font-size: 0.65rem;
+        background: #162E49;
+        color: #94A3B8;
+        padding: 0.15rem 0.4rem;
+        letter-spacing: 0.08em;
+        border: 1px solid #1E3A5F;
+      }
+
+      /* Desktop Nav */
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 1.75rem;
+      }
+
+      @media (min-width: 820px) {
+        .desktop-nav {
+          display: flex;
+        }
+      }
+
+      .nav-link {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #CBD5E1;
+        position: relative;
+        padding: 0.5rem 0;
+        white-space: nowrap;
+      }
+
+      .nav-link:hover {
+        color: #FFFFFF;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-gold);
+        transition: width var(--transition-standard);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      /* Dark Mode Toggle Button */
+      .theme-toggle-btn {
+        background: transparent;
+        border: 1px solid #243D5C;
+        color: #CBD5E1;
+        height: 38px;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .theme-toggle-btn:hover {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+      }
+
+      /* Mobile Menu Toggle Button (Under 820px) */
+      .mobile-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding: 0 1rem;
+        background-color: #162E49;
+        border: 1px solid #243D5C;
+        color: #FFFFFF;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      @media (min-width: 820px) {
+        .mobile-menu-btn {
+          display: none;
+        }
+      }
+
+      /* Mobile Dropdown Panel */
+      .mobile-dropdown {
+        display: none;
+        background-color: #0A1828;
+        border-bottom: 1px solid #1E354F;
+        padding: 1rem 1.5rem;
+      }
+
+      .mobile-dropdown.is-open {
+        display: block;
+      }
+
+      .mobile-dropdown-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+      }
+
+      .mobile-dropdown-links a {
+        display: block;
+        padding: 0.75rem 0;
+        color: #E2E8F0;
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-bottom: 1px solid #162E49;
+      }
+
+      .mobile-dropdown-links a:hover {
+        color: var(--color-gold);
+        padding-left: 0.5rem;
+      }
+
+      /* ==========================================================================
+         SECTION 1: HERO (NAVY BACKGROUND)
+         ========================================================================== */
+      .hero-section {
+        background-color: var(--color-navy);
+        color: #FFFFFF;
+        padding: 5rem 0 4.5rem 0;
+        position: relative;
+        border-bottom: 1px solid #1E354F;
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          padding: 6.5rem 0 5.5rem 0;
+        }
+      }
+
+      .hero-content {
+        max-width: 860px;
+      }
+
+      .hero-tagline {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-gold);
+        margin-bottom: 1rem;
+      }
+
+      .hero-headline {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        margin-bottom: 1.5rem;
+        text-wrap: balance;
+      }
+
+      @media (min-width: 768px) {
+        .hero-headline {
+          font-size: 3.25rem;
+        }
+      }
+
+      .hero-subtext {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #CBD5E1;
+        margin-bottom: 2.25rem;
+        max-width: 740px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
+      .hero-divider {
+        height: 1px;
+        background-color: #1E354F;
+        border: none;
+        margin-bottom: 1.75rem;
+      }
+
+      .hero-credentials {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem 2rem;
+        font-size: 0.85rem;
+        color: #94A3B8;
+        letter-spacing: 0.02em;
+      }
+
+      .credential-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .credential-dot {
+        width: 4px;
+        height: 4px;
+        background-color: var(--color-gold);
+      }
+
+      /* ==========================================================================
+         SECTION 2: ABOUT (TWO COLUMNS)
+         ========================================================================== */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      @media (min-width: 860px) {
+        .about-grid {
+          grid-template-columns: 5fr 7fr;
+          gap: 4.5rem;
+          align-items: start;
+        }
+      }
+
+      .about-left-heading {
+        font-size: 1.85rem;
+        line-height: 1.25;
+        color: var(--color-charcoal);
+        letter-spacing: -0.015em;
+      }
+
+      @media (min-width: 768px) {
+        .about-left-heading {
+          font-size: 2.35rem;
+        }
+      }
+
+      .about-left-kicker {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-gold);
+        margin-bottom: 0.75rem;
+        display: block;
+      }
+
+      .about-right-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 1.35rem;
+      }
+
+      .about-right-copy p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+      }
+
+      .about-highlight-box {
+        margin-top: 1rem;
+        padding: 1.25rem;
+        background-color: var(--color-grey-light);
+        border-left: 2px solid var(--color-gold);
+        border-top: 1px solid var(--color-border);
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        font-size: 0.9rem;
+      }
+
+      .about-highlight-box strong {
+        color: var(--color-charcoal);
+      }
+
+      /* ==========================================================================
+         SECTION 3: PRODUCTS AND SERVICES (GREY BACKGROUND, RULED LIST)
+         ========================================================================== */
+      .section-header {
+        margin-bottom: 3rem;
+        max-width: 800px;
+      }
+
+      .section-kicker {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-gold);
+        margin-bottom: 0.65rem;
+        display: block;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+        line-height: 1.25;
+        color: var(--color-charcoal);
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .section-intro {
+        font-size: 1.05rem;
+        color: var(--color-charcoal-muted);
+      }
+
+      /* Ruled 3-Column Table / List */
+      .ruled-list-container {
+        border-top: 1px solid var(--color-border-darker);
+        border-bottom: 1px solid var(--color-border-darker);
+        background-color: var(--color-white);
+      }
+
+      .ruled-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1.35rem 1.25rem;
+        border-bottom: 1px solid var(--color-border);
+        gap: 0.65rem;
+        transition: background-color var(--transition-standard);
+      }
+
+      .ruled-item:last-child {
+        border-bottom: none;
+      }
+
+      .ruled-item:hover {
+        background-color: var(--color-grey-light);
+      }
+
+      @media (min-width: 768px) {
+        .ruled-item {
+          grid-template-columns: 3fr 5fr 2fr;
+          align-items: center;
+          padding: 1.5rem 1.75rem;
+          gap: 1.5rem;
+        }
+      }
+
+      .ruled-category {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--color-charcoal);
+        letter-spacing: -0.01em;
+      }
+
+      .ruled-description {
+        font-size: 0.95rem;
+        color: var(--color-charcoal-muted);
+        line-height: 1.55;
+      }
+
+      .ruled-action {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      @media (min-width: 768px) {
+        .ruled-action {
+          justify-content: flex-end;
+        }
+      }
+
+      .enquiry-link {
+        font-size: 0.825rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-gold);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 2px;
+      }
+
+      .enquiry-link:hover {
+        color: var(--color-gold-hover);
+        border-bottom-color: var(--color-gold-hover);
+      }
+
+      .products-note {
+        margin-top: 2.25rem;
+        padding: 1.25rem 1.5rem;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border-darker);
+        font-size: 0.925rem;
+        color: var(--color-charcoal-muted);
+        line-height: 1.6;
+      }
+
+      .products-note strong {
+        color: var(--color-charcoal);
+      }
+
+      /* ==========================================================================
+         SECTION 4: SOURCING PROCESS / WHY WORK WITH US
+         ========================================================================== */
+      .process-strip {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-top: 1px solid var(--color-border-darker);
+        border-left: 1px solid var(--color-border-darker);
+      }
+
+      @media (min-width: 640px) {
+        .process-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .process-strip {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .process-step {
+        padding: 2rem 1.75rem;
+        border-right: 1px solid var(--color-border-darker);
+        border-bottom: 1px solid var(--color-border-darker);
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .step-number {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-gold);
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+      }
+
+      .step-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--color-charcoal);
+        margin-bottom: 0.75rem;
+      }
+
+      .step-desc {
+        font-size: 0.9rem;
+        color: var(--color-charcoal-muted);
+        line-height: 1.6;
+      }
+
+      /* ==========================================================================
+         SECTION 5: GeM & INSTITUTIONAL PROCUREMENT (GREY BACKGROUND)
+         ========================================================================== */
+      .gem-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      @media (min-width: 860px) {
+        .gem-layout {
+          grid-template-columns: 7fr 5fr;
+          align-items: start;
+        }
+      }
+
+      .gem-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-top: 1.75rem;
+      }
+
+      .gem-feature-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .gem-feature-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--color-gold);
+        margin-top: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      .gem-feature-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-charcoal);
+        margin-bottom: 0.25rem;
+      }
+
+      .gem-sidebar-box {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border-darker);
+        padding: 2rem;
+      }
+
+      .gem-sidebar-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--color-charcoal);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .gem-data-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .gem-data-row:last-child {
+        border-bottom: none;
+      }
+
+      .gem-data-label {
+        color: var(--color-charcoal-muted);
+      }
+
+      .gem-data-val {
+        font-weight: 600;
+        color: var(--color-charcoal);
+        text-align: right;
+      }
+
+      /* ==========================================================================
+         SECTION 6: REQUEST A QUOTE & CONTACT
+         ========================================================================== */
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+
+      @media (min-width: 860px) {
+        .contact-layout {
+          grid-template-columns: 7fr 5fr;
+        }
+      }
+
+      .form-container {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border-darker);
+        padding: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .form-container {
+          padding: 2.5rem;
+        }
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .form-row-2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .form-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-charcoal);
+      }
+
+      .form-input,
+      .form-select,
+      .form-textarea {
+        height: 44px;
+        padding: 0 0.875rem;
+        background-color: var(--color-input-bg);
+        border: 1px solid var(--color-border-darker);
+        color: var(--color-charcoal);
+        font-family: var(--font-sans);
+        font-size: 0.9rem;
+        transition: border-color var(--transition-standard);
+      }
+
+      .form-textarea {
+        height: 120px;
+        padding: 0.75rem 0.875rem;
+        resize: vertical;
+      }
+
+      .form-input:focus,
+      .form-select:focus,
+      .form-textarea:focus {
+        border-color: var(--color-navy);
+        outline: none;
+      }
+
+      .form-notice {
+        font-size: 0.8rem;
+        color: var(--color-charcoal-muted);
+        margin-top: 0.75rem;
+      }
+
+      /* Form success alert */
+      .form-alert-success {
+        display: none;
+        padding: 1.25rem;
+        background-color: var(--color-grey-light);
+        border: 1px solid var(--color-gold);
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--color-charcoal);
+      }
+
+      .form-alert-success.is-visible {
+        display: block;
+      }
+
+      /* Contact Details Card */
+      .contact-details-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .contact-card {
+        background-color: var(--color-grey-light);
+        border: 1px solid var(--color-border);
+        padding: 2rem;
+      }
+
+      .contact-card-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--color-charcoal);
+        margin-bottom: 1.25rem;
+      }
+
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+      }
+
+      .contact-item-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-gold);
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+
+      .contact-item-value {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-charcoal);
+      }
+
+      .contact-item-sub {
+        font-size: 0.85rem;
+        color: var(--color-charcoal-muted);
+      }
+
+      /* ==========================================================================
+         FOOTER (NAVY BACKGROUND)
+         ========================================================================== */
+      .site-footer {
+        background-color: var(--color-navy);
+        color: #FFFFFF;
+        padding: 4.5rem 0 2.5rem 0;
+        border-top: 1px solid #1E354F;
+        margin-top: auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .footer-grid {
+          grid-template-columns: 4fr 3fr 3fr 2fr;
+        }
+      }
+
+      .footer-brand-desc {
+        font-size: 0.9rem;
+        color: #94A3B8;
+        line-height: 1.65;
+        margin-top: 1rem;
+        max-width: 320px;
+      }
+
+      .footer-col-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #CBD5E1;
+        margin-bottom: 1.25rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .footer-links a {
+        font-size: 0.875rem;
+        color: #94A3B8;
+      }
+
+      .footer-links a:hover {
+        color: #FFFFFF;
+      }
+
+      .footer-meta-text {
+        font-size: 0.85rem;
+        color: #94A3B8;
+        line-height: 1.6;
+      }
+
+      .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid #1E354F;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #64748B;
+      }
+
+      @media (min-width: 768px) {
+        .footer-bottom {
+          flex-direction: row;
+        }
+      }
+
+      .back-to-top {
+        color: var(--color-gold);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.75rem;
+      }
+
+      .back-to-top:hover {
+        color: #FFFFFF;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ==========================================================================
+         STICKY NAVY HEADER
+         - Logo: WMK TRADERS ("TRADERS" in gold)
+         - Menu links
+         - Gold "Request a quote" button
+         - Mobile dropdown menu (under 820px)
+         ========================================================================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Logo -->
+        <a href="#hero" class="brand-logo" aria-label="WMK Traders Homepage">
+          <span>WMK <span class="logo-traders">TRADERS</span></span>
+          <span class="brand-badge">KARNAL</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#products" class="nav-link">Products &amp; Services</a>
+          <a href="#how-we-work" class="nav-link">How We Work</a>
+          <a href="#gem" class="nav-link">GeM &amp; Institutional</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <!-- Dark Mode Toggle Button -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light and Dark Mode">
+            <span id="themeBtnText">Dark</span>
+          </button>
+
+          <!-- Gold Primary Action Button -->
+          <a href="#contact" class="btn btn-gold" style="height: 40px; padding: 0 1.25rem;">
+            Request a quote
+          </a>
+
+          <!-- Mobile Menu Button (under 820px) -->
+          <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileDropdownMenu" aria-label="Toggle Navigation Menu">
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-dropdown" id="mobileDropdownMenu">
+        <ul class="mobile-dropdown-links">
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#products" class="mobile-nav-link">Products &amp; Services</a></li>
+          <li><a href="#how-we-work" class="mobile-nav-link">How We Work</a></li>
+          <li><a href="#gem" class="mobile-nav-link">GeM &amp; Institutional Supply</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact &amp; Quotes</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================================================
+           SECTION 1: HERO (NAVY BACKGROUND)
+           ========================================================================== -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tagline">Multi-Category Trading &amp; Supply Business</span>
+            <h1 class="hero-headline">
+              Reliable supply. Quality products. Trusted partnerships.
+            </h1>
+            <p class="hero-subtext">
+              WMK Traders is a multi-category trading and supply business based in Karnal, Haryana. We help businesses, institutions and individuals source what they need with clear communication and dependable service.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-gold">
+                Request a quote
+              </a>
+              <a href="#products" class="btn btn-outline-white">
+                Explore our products
+              </a>
+              <a href="#gem" class="btn btn-outline-white">
+                Find us on GeM
+              </a>
+            </div>
+
+            <hr class="hero-divider" />
+
+            <div class="hero-credentials">
+              <div class="credential-item">
+                <span class="credential-dot"></span>
+                <span>Serving customers since 2019</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-dot"></span>
+                <span>Udyam registered MSME</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-dot"></span>
+                <span>Based in Karnal, Haryana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 2: ABOUT (TWO COLUMNS)
+           ========================================================================== -->
+      <section class="section-white" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <!-- Left Column: Heading -->
+            <div>
+              <span class="about-left-kicker">About WMK Traders</span>
+              <h2 class="about-left-heading">
+                A dependable partner for diverse business needs
+              </h2>
+            </div>
+
+            <!-- Right Column: Three Short Paragraphs -->
+            <div class="about-right-copy">
+              <p>
+                WMK Traders began trading in 2019 and supplies electrical items, hardware, furniture, IT equipment, stationery and clothing.
+              </p>
+              <p>
+                We aim to simplify sourcing: you tell us what you need, we source it, and we keep you informed. Our work rests on prompt replies, being open about what we can and cannot supply, and attention to quality.
+              </p>
+              <p>
+                Run by Himanshu Taneja, who also provides training.
+              </p>
+
+              <div class="about-highlight-box">
+                <strong>Our Operating Principle:</strong> Direct accountability and straightforward commercial communication on every order — from single-unit requirements to ongoing institutional consignments.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 3: PRODUCTS AND SERVICES (GREY BACKGROUND, RULED LIST)
+           ========================================================================== -->
+      <section class="section-grey" id="products">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Product Catalog &amp; Procurement</span>
+            <h2 class="section-title">Products and services</h2>
+            <p class="section-intro">
+              Tell us what you are looking for, including bulk and institutional requirements. We will confirm availability and supply options.
+            </p>
+          </div>
+
+          <!-- Ruled 3-Column List -->
+          <div class="ruled-list-container">
+            <!-- 1. Electrical and electronics -->
+            <div class="ruled-item">
+              <div class="ruled-category">Electrical and electronics</div>
+              <div class="ruled-description">Electrical products, electronic equipment and related supplies.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Electrical and electronics')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 2. Hardware and tools -->
+            <div class="ruled-item">
+              <div class="ruled-category">Hardware and tools</div>
+              <div class="ruled-description">Hardware, tools, fittings, paints and related materials.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Hardware and tools')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 3. Furniture -->
+            <div class="ruled-item">
+              <div class="ruled-category">Furniture</div>
+              <div class="ruled-description">Furniture for offices, institutions and other requirements.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Furniture')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 4. IT equipment and accessories -->
+            <div class="ruled-item">
+              <div class="ruled-category">IT equipment and accessories</div>
+              <div class="ruled-description">Computers, IT-related products and accessories.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('IT equipment and accessories')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 5. Stationery and laboratory supplies -->
+            <div class="ruled-item">
+              <div class="ruled-category">Stationery and laboratory supplies</div>
+              <div class="ruled-description">Stationery, educational supplies and laboratory-related items.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Stationery and laboratory supplies')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 6. Clothing and garments -->
+            <div class="ruled-item">
+              <div class="ruled-category">Clothing and garments</div>
+              <div class="ruled-description">Clothing, garments and related merchandise.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Clothing and garments')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+
+            <!-- 7. Bulk and institutional orders -->
+            <div class="ruled-item">
+              <div class="ruled-category">Bulk and institutional orders</div>
+              <div class="ruled-description">Regular or large requirements for offices, institutions and businesses.</div>
+              <div class="ruled-action">
+                <a href="#contact" class="enquiry-link" onclick="prefillCategory('Bulk and institutional orders')">
+                  Make an enquiry →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Note below list -->
+          <div class="products-note">
+            <strong>Note:</strong> Specific brands, technical specifications, and bulk quantities can be sourced upon request. If your required item or trade category is not explicitly cataloged above, contact us with your specifications and we will confirm market availability, delivery schedules, and price estimates.
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 4: HOW WE WORK (UN-CARDED LINEAR SOURCING PROCESS)
+           ========================================================================== -->
+      <section class="section-white" id="how-we-work">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Operational Workflow</span>
+            <h2 class="section-title">How we work</h2>
+            <p class="section-intro">
+              Our sourcing method is structured to remove guesswork, ensure verified quality, and keep procurement timelines reliable.
+            </p>
+          </div>
+
+          <div class="process-strip">
+            <div class="process-step">
+              <div class="step-number">01</div>
+              <div>
+                <h3 class="step-title">Share your requirements</h3>
+                <p class="step-desc">
+                  Tell us item specifications, desired brands, approximate volume, and delivery destination in Karnal or surrounding regions.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">02</div>
+              <div>
+                <h3 class="step-title">Clear feasibility &amp; quote</h3>
+                <p class="step-desc">
+                  We check verified supply lines, confirm lead times, and provide an all-inclusive, transparent quotation with no hidden charges.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">03</div>
+              <div>
+                <h3 class="step-title">Inspection &amp; dispatch</h3>
+                <p class="step-desc">
+                  Materials are checked against your exact specifications before being packed and dispatched with proper transport transit coordination.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">04</div>
+              <div>
+                <h3 class="step-title">Invoicing &amp; support</h3>
+                <p class="step-desc">
+                  Complete GST documentation, MSME verification details, and post-delivery follow-up to ensure seamless institutional records.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 5: GeM & INSTITUTIONAL SUPPLY (GREY BACKGROUND)
+           ========================================================================== -->
+      <section class="section-grey" id="gem">
+        <div class="container">
+          <div class="gem-layout">
+            <div>
+              <span class="section-kicker">Government &amp; Enterprise Procurement</span>
+              <h2 class="section-title">Government e-Marketplace (GeM) &amp; Institutional Supply</h2>
+              <p class="section-intro">
+                WMK Traders actively supports government departments, educational institutions, universities, hospitals, and commercial corporate facilities across Haryana.
+              </p>
+
+              <ul class="gem-features">
+                <li class="gem-feature-item">
+                  <span class="gem-feature-bullet"></span>
+                  <div>
+                    <h4 class="gem-feature-title">GeM Registered Vendor</h4>
+                    <p class="step-desc">Fully registered on the Government e-Marketplace portal for compliant direct purchase, L1 quotes, and custom bid participation.</p>
+                  </div>
+                </li>
+
+                <li class="gem-feature-item">
+                  <span class="gem-feature-bullet"></span>
+                  <div>
+                    <h4 class="gem-feature-title">Udyam Registered MSME</h4>
+                    <p class="step-desc">Recognized under the Ministry of Micro, Small and Medium Enterprises (MSME), Government of India.</p>
+                  </div>
+                </li>
+
+                <li class="gem-feature-item">
+                  <span class="gem-feature-bullet"></span>
+                  <div>
+                    <h4 class="gem-feature-title">GST Compliant Documentation</h4>
+                    <p class="step-desc">Proper tax invoices with accurate HSN codes, e-way bills, and clear payment records for public and private auditing.</p>
+                  </div>
+                </li>
+
+                <li class="gem-feature-item">
+                  <span class="gem-feature-bullet"></span>
+                  <div>
+                    <h4 class="gem-feature-title">Regional Logistics Network</h4>
+                    <p class="step-desc">Direct delivery capability throughout Karnal, Panipat, Kurukshetra, Kaithal, Ambala, and the NCR trade corridor.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="gem-sidebar-box">
+              <h3 class="gem-sidebar-title">Enterprise Credentials</h3>
+              
+              <div class="gem-data-row">
+                <span class="gem-data-label">Entity Name</span>
+                <span class="gem-data-val">WMK TRADERS</span>
+              </div>
+              <div class="gem-data-row">
+                <span class="gem-data-label">Enterprise Type</span>
+                <span class="gem-data-val">Udyam MSME (Trading &amp; Supply)</span>
+              </div>
+              <div class="gem-data-row">
+                <span class="gem-data-label">Proprietor</span>
+                <span class="gem-data-val">Himanshu Taneja</span>
+              </div>
+              <div class="gem-data-row">
+                <span class="gem-data-label">Operational Since</span>
+                <span class="gem-data-val">2019</span>
+              </div>
+              <div class="gem-data-row">
+                <span class="gem-data-label">Headquarters</span>
+                <span class="gem-data-val">Karnal, Haryana, India</span>
+              </div>
+              <div class="gem-data-row">
+                <span class="gem-data-label">GeM Standing</span>
+                <span class="gem-data-val" style="color: var(--color-gold);">Verified Supplier</span>
+              </div>
+
+              <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border);">
+                <a href="#contact" class="btn btn-navy" style="width: 100%;">
+                  Request GeM Inquiry
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 6: REQUEST A QUOTE & CONTACT
+           ========================================================================== -->
+      <section class="section-white" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Direct Procurement Communication</span>
+            <h2 class="section-title">Request a quote</h2>
+            <p class="section-intro">
+              Submit your requirements below or reach out directly via phone or WhatsApp. We reply promptly with availability, price estimates, and delivery windows.
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <!-- Form Column -->
+            <div class="form-container">
+              <!-- Success Alert Banner -->
+              <div class="form-alert-success" id="formSuccessAlert" role="alert">
+                <strong>Thank you! Your quote request has been received.</strong>
+                <p style="font-size: 0.85rem; margin-top: 0.35rem; color: var(--color-charcoal);">
+                  Himanshu Taneja / WMK Traders will review your specifications and get in touch with you shortly via phone or email.
+                </p>
+                <div style="margin-top: 0.75rem; font-size: 0.8rem; font-weight: 600;">
+                  Reference ID: <span id="quoteRefNumber" style="font-family: monospace;">WMK-QUOTE-2026</span>
+                </div>
+              </div>
+
+              <form id="quoteRequestForm" onsubmit="handleQuoteSubmit(event)">
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="clientName" class="form-label">Full Name *</label>
+                    <input type="text" id="clientName" class="form-input" placeholder="Your name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="clientOrg" class="form-label">Business / Institution</label>
+                    <input type="text" id="clientOrg" class="form-input" placeholder="Company, School, Department" />
+                  </div>
+                </div>
+
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="clientPhone" class="form-label">Phone / WhatsApp *</label>
+                    <input type="tel" id="clientPhone" class="form-input" placeholder="+91 98XXX XXXXX" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="clientEmail" class="form-label">Email Address</label>
+                    <input type="email" id="clientEmail" class="form-input" placeholder="name@example.com" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="productCategory" class="form-label">Primary Supply Category *</label>
+                    <select id="productCategory" class="form-select" required>
+                      <option value="">Select a category...</option>
+                      <option value="Electrical and electronics">Electrical and electronics</option>
+                      <option value="Hardware and tools">Hardware and tools</option>
+                      <option value="Furniture">Furniture</option>
+                      <option value="IT equipment and accessories">IT equipment and accessories</option>
+                      <option value="Stationery and laboratory supplies">Stationery and laboratory supplies</option>
+                      <option value="Clothing and garments">Clothing and garments</option>
+                      <option value="Bulk and institutional orders">Bulk and institutional orders</option>
+                      <option value="Other customized sourcing">Other customized sourcing</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="requirementDetails" class="form-label">Requirement Details &amp; Quantities *</label>
+                    <textarea id="requirementDetails" class="form-textarea" placeholder="Please describe the items, required quantities, preferred brands or technical specifications, and expected delivery date..." required></textarea>
+                  </div>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                  <button type="submit" class="btn btn-gold" style="width: 100%;">
+                    Submit quote request
+                  </button>
+                  <p class="form-notice">
+                    No spam. We only use your contact details to provide formal price quotes and verify delivery logistics.
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <!-- Contact Details Column -->
+            <div class="contact-details-box">
+              <div class="contact-card">
+                <h3 class="contact-card-title">Direct Contact Information</h3>
+                
+                <ul class="contact-list">
+                  <li>
+                    <span class="contact-item-title">Enterprise Name</span>
+                    <span class="contact-item-value">WMK TRADERS</span>
+                    <span class="contact-item-sub">Trading, Wholesale &amp; Institutional Supply</span>
+                  </li>
+
+                  <li>
+                    <span class="contact-item-title">Owner &amp; Proprietor</span>
+                    <span class="contact-item-value">Himanshu Taneja</span>
+                    <span class="contact-item-sub">Trade Operations &amp; Training Facilitator</span>
+                  </li>
+
+                  <li>
+                    <span class="contact-item-title">Operating Location</span>
+                    <span class="contact-item-value">Karnal, Haryana, India</span>
+                    <span class="contact-item-sub">Serving Haryana, Punjab, Delhi &amp; NCR</span>
+                  </li>
+
+                  <li>
+                    <span class="contact-item-title">Phone &amp; WhatsApp</span>
+                    <span class="contact-item-value">+91 (Inquiry line available)</span>
+                    <span class="contact-item-sub">Direct WhatsApp callback for institutional tenders</span>
+                  </li>
+
+                  <li>
+                    <span class="contact-item-title">Working Hours</span>
+                    <span class="contact-item-value">Monday to Saturday</span>
+                    <span class="contact-item-sub">9:00 AM to 7:00 PM IST</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Quick File Export helper -->
+              <div style="background-color: var(--color-grey-light); border: 1px solid var(--color-border); padding: 1.5rem;">
+                <span class="contact-item-title">Standalone Website Export</span>
+                <p style="font-size: 0.85rem; color: var(--color-charcoal-muted); margin: 0.5rem 0 1rem 0;">
+                  This website is coded as ONE self-contained HTML file without external framework dependencies.
+                </p>
+                <button type="button" onclick="downloadSelfContainedHTML()" class="btn btn-outline-dark" style="width: 100%; height: 38px; font-size: 0.75rem;">
+                  Save Page as Standalone .HTML
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER (NAVY BACKGROUND)
+         ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand -->
+          <div>
+            <div class="brand-logo" style="font-size: 1.25rem;">
+              <span>WMK <span class="logo-traders">TRADERS</span></span>
+            </div>
+            <p class="footer-brand-desc">
+              Reliable supply. Quality products. Trusted partnerships. Multi-category trading and institutional supplies based in Karnal, Haryana.
+            </p>
+            <div style="margin-top: 1.25rem; font-size: 0.8rem; color: #94A3B8;">
+              Owner: <strong style="color: #FFFFFF;">Himanshu Taneja</strong>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About WMK Traders</a></li>
+              <li><a href="#products">Products &amp; Services</a></li>
+              <li><a href="#how-we-work">How We Work</a></li>
+              <li><a href="#gem">GeM &amp; Institutional Supply</a></li>
+              <li><a href="#contact">Request a Quote</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Supply Categories -->
+          <div>
+            <h4 class="footer-col-title">Core Categories</h4>
+            <ul class="footer-links">
+              <li><a href="#products" onclick="prefillCategory('Electrical and electronics')">Electrical &amp; Electronics</a></li>
+              <li><a href="#products" onclick="prefillCategory('Hardware and tools')">Hardware &amp; Tools</a></li>
+              <li><a href="#products" onclick="prefillCategory('Furniture')">Institutional Furniture</a></li>
+              <li><a href="#products" onclick="prefillCategory('IT equipment and accessories')">IT &amp; Computer Equipment</a></li>
+              <li><a href="#products" onclick="prefillCategory('Stationery and laboratory supplies')">Stationery &amp; Lab Supplies</a></li>
+              <li><a href="#products" onclick="prefillCategory('Clothing and garments')">Clothing &amp; Garments</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Institutional & Compliance -->
+          <div>
+            <h4 class="footer-col-title">Compliance</h4>
+            <div class="footer-meta-text">
+              <p style="margin-bottom: 0.65rem; color: #CBD5E1;">
+                Udyam Registered MSME<br />
+                Govt. of India
+              </p>
+              <p style="margin-bottom: 0.65rem; color: #CBD5E1;">
+                GeM Portal Registered<br />
+                Direct &amp; L1 Supply
+              </p>
+              <p style="color: #94A3B8;">
+                Serving Karnal, Haryana &amp; National Capital Region.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; <span id="currentYear">2026</span> WMK TRADERS, Karnal, Haryana. All rights reserved.
+          </div>
+          <div>
+            <a href="#hero" class="back-to-top">Back to top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         SELF-CONTAINED JAVASCRIPT
+         - Mobile Menu Toggle (< 820px)
+         - Smooth scrolling & category prefill
+         - Dark mode switch & system preference sync
+         - Form submission with reference generation
+         - Standalone HTML export generator
+         ========================================================================== -->
+    <script>
+      (function() {
+        // Set Year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDropdown = document.getElementById('mobileDropdownMenu');
+
+        if (mobileMenuBtn && mobileDropdown) {
+          mobileMenuBtn.addEventListener('click', function() {
+            const isOpen = mobileDropdown.classList.contains('is-open');
+            if (isOpen) {
+              mobileDropdown.classList.remove('is-open');
+              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            } else {
+              mobileDropdown.classList.add('is-open');
+              mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            }
+          });
+
+          // Close mobile menu when a nav link is clicked
+          const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+          mobileNavLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+              mobileDropdown.classList.remove('is-open');
+              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+
+        // 2. Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeBtnText = document.getElementById('themeBtnText');
+
+        // Check stored or system preference
+        const currentStoredTheme = localStorage.getItem('wmk_theme');
+        if (currentStoredTheme) {
+          document.documentElement.setAttribute('data-theme', currentStoredTheme);
+          updateThemeButtonLabel(currentStoredTheme);
+        } else {
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          updateThemeButtonLabel(prefersDark ? 'dark' : 'light');
+        }
+
+        if (themeToggleBtn) {
+          themeToggleBtn.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('wmk_theme', newTheme);
+            updateThemeButtonLabel(newTheme);
+          });
+        }
+
+        function updateThemeButtonLabel(theme) {
+          if (themeBtnText) {
+            themeBtnText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          }
+        }
+      })();
+
+      // 3. Category pre-selection helper when clicking "Make an enquiry"
+      function prefillCategory(categoryName) {
+        const select = document.getElementById('productCategory');
+        if (select) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === categoryName) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+
+      // 4. Form submission handler
+      function handleQuoteSubmit(e) {
+        e.preventDefault();
+        const clientName = document.getElementById('clientName').value;
+        const clientPhone = document.getElementById('clientPhone').value;
+        const category = document.getElementById('productCategory').value;
+        const details = document.getElementById('requirementDetails').value;
+
+        // Generate formal reference number
+        const randomRef = 'WMK-' + Math.floor(100000 + Math.random() * 900000);
+        const refElem = document.getElementById('quoteRefNumber');
+        if (refElem) refElem.textContent = randomRef;
+
+        const alertBox = document.getElementById('formSuccessAlert');
+        if (alertBox) {
+          alertBox.classList.add('is-visible');
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Reset form inputs except reference
+        document.getElementById('quoteRequestForm').reset();
+      }
+
+      // 5. Standalone HTML Export Handler
+      function downloadSelfContainedHTML() {
+        const htmlContent = '<!doctype html>\n' + document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'wmk-traders-karnal.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    </script>
+  </body>
+</html>
